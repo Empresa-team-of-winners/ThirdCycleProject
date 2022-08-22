@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a2f050c-0186-4a41-b135-4a96495c7777" name="Changes" comment="Devolviendo mas cambios">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_11_53_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_11_53_p__m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Credenciales_de_acceso.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Credenciales_de_acceso.txt" afterDir="false" />
-    </list>
+    <list default="true" id="0a2f050c-0186-4a41-b135-4a96495c7777" name="Changes" comment="Alex Correa probando crear nueva entidad en postgresql" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660532157747</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Alex Correa probando crear nueva entidad en postgresql">
+      <created>1661131624843</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661131624843</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +114,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sprint 2.&#10;Objetivo: Crear clases para las entidades básicas de la aplicación." />
     <MESSAGE value="Sprint 2.&#10;Objetivo: Crear clase Empleado para las entidades básicas de la aplicación." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint 2.&#10;Objetivo: Crear clase Empleado para las entidades básicas de la aplicación." />
+    <MESSAGE value="Alex Correa probando crear nueva entidad en postgresql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alex Correa probando crear nueva entidad en postgresql" />
   </component>
 </project>
