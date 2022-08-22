@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2f050c-0186-4a41-b135-4a96495c7777" name="Changes" comment="Devolviendo mas cambios">
-      <change afterPath="$PROJECT_DIR$/src/Tokens/Login.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tokens/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_11_53_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_08_2022_11_53_p__m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVirtualNFT/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVirtualNFT/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Credenciales_de_acceso.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Credenciales_de_acceso.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
