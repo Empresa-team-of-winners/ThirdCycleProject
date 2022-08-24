@@ -1,6 +1,0 @@
-hola
-prueba 1
-prueba 2
-cambio para git pull
-prueba modificacion
-nuevo commit
