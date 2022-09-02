@@ -1,8 +1,11 @@
 package com.team.winners.thirdcycleproject.models;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "transaction")
 public class Transaction {
     @Id
@@ -11,6 +14,8 @@ public class Transaction {
     private String concept;
     private Float amount;
     private String user;
+    @ManyToOne
+    @JoinColumn(name = "enterprise_id")
     private Enterprise enterprise;
     private String createdAt;
     private String updatedAt;

@@ -1,16 +1,23 @@
 package com.team.winners.thirdcycleproject.models;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String email;
+    @ManyToOne
+    @JoinColumn(name = "profile_id")
     private Profile profile;
     private String role;
+    @ManyToOne
+    @JoinColumn(name = "enterprise_id")
     private Enterprise enterprise;
     private String transactions;
     private String updatedAt;
