@@ -1,8 +1,6 @@
 package com.team.winners.thirdcycleproject.service;
 
-import com.team.winners.thirdcycleproject.models.Employee;
 import com.team.winners.thirdcycleproject.models.Enterprise;
-import com.team.winners.thirdcycleproject.repository.EmployeeRepository;
 import com.team.winners.thirdcycleproject.repository.EnterpriseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,5 @@
 package com.team.winners.thirdcycleproject.service;
 
-import com.team.winners.thirdcycleproject.models.Employee;
-import com.team.winners.thirdcycleproject.models.Enterprise;
 import com.team.winners.thirdcycleproject.models.Transaction;
 import com.team.winners.thirdcycleproject.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
