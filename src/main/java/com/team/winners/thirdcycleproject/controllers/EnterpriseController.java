@@ -1,13 +1,14 @@
-package controllers;
+package com.team.winners.thirdcycleproject.controllers;
 
 import com.team.winners.thirdcycleproject.service.EmployeeService;
+import com.team.winners.thirdcycleproject.service.EnterpriseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping ("/employee/")
-public class EmployeeController  {
+@RequestMapping("/enterprise/")
+public class EnterpriseController {
     @Autowired
-    private EmployeeService employeeService;
+    private EnterpriseService enterpriseService;
 }
