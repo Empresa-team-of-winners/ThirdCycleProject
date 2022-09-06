@@ -16,18 +16,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-public class ThirdcycleprojectApplication implements CommandLineRunner{
+public class ThirdcycleprojectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ThirdcycleprojectApplication.class, args);
-	}
-	@Autowired
-	private EmployeeService employeeService;
-	@Override
-	public void run(String...args) throws Exception {
-		employeeService.insertEmployee();
-		System.out.println("tagDATA"+employeeService.findAll());
-
 	}
 
 }
