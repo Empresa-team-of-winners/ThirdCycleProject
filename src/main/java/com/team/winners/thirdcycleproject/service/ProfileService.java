@@ -1,5 +1,4 @@
 package com.team.winners.thirdcycleproject.service;
-import com.team.winners.thirdcycleproject.models.Employee;
 import com.team.winners.thirdcycleproject.models.Profile;
 import com.team.winners.thirdcycleproject.repository.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;

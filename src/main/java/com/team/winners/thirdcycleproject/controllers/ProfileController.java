@@ -1,7 +1,5 @@
 package com.team.winners.thirdcycleproject.controllers;
-import com.team.winners.thirdcycleproject.models.Employee;
 import com.team.winners.thirdcycleproject.models.Profile;
-import com.team.winners.thirdcycleproject.service.EmployeeService;
 import com.team.winners.thirdcycleproject.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,10 +12,10 @@ public class ProfileController {
     @Autowired
     private ProfileService profileService;
     @GetMapping
-    private ResponseEntity<List<Profile>> getAllEmployee (){return ResponseEntity.ok(profileService.findAll());}
+    private ResponseEntity<List<Profile>> getAllProfile (){return ResponseEntity.ok(profileService.findAll());}
 
     @PostMapping
-    private ResponseEntity<Profile> saveEmployee (@RequestBody Profile perfil){
+    private ResponseEntity<Profile> saveProfile (@RequestBody Profile perfil){
         try {
             Profile profileSaved = profileService.save(perfil);
             return ResponseEntity.created(new URI("/profile/"+profileSaved.getId())).body(profileSaved);

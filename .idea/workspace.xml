@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="fix: controllers location in the package">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/ProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/ProfileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/ProfileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/ProfileService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
