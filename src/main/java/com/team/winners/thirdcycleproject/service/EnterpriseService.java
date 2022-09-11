@@ -5,6 +5,7 @@ import com.team.winners.thirdcycleproject.repository.EnterpriseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -12,6 +13,10 @@ public class EnterpriseService {
 
     @Autowired
     private EnterpriseRepository enterpriseRepository;
+
+    public List<Enterprise> findAll() {
+        return enterpriseRepository.findAll();
+    }
 
     public <S extends Enterprise> S save(S entity) {
         return enterpriseRepository.save(entity);
@@ -32,4 +37,11 @@ public class EnterpriseService {
         return enterpriseRepository.findById(id);
     }
 
+    public Boolean deleteById(Long id) {
+        if (enterpriseRepository.existsById(id)) {
+            enterpriseRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }

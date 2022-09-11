@@ -26,5 +26,11 @@ public class ProfileService {
     public Optional<Profile> findById(Long id) {
         return profileRepository.findById(id);
     }
-
+    public Boolean deleteById(Long id) {
+        if (profileRepository.existsById(id)) {
+            profileRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }

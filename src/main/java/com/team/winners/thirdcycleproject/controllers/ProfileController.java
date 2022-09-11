@@ -24,4 +24,9 @@ public class ProfileController {
         }
     }
 
+    @DeleteMapping (value = "delete/{id}")
+    private ResponseEntity<Boolean> deleteProfile (@PathVariable ("id") Long id){
+        return ResponseEntity.ok(profileService.deleteById(id));
+    }
+
 }
