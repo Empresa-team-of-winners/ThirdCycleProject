@@ -22,7 +22,7 @@ public class TransactionService {
         return transactionRepository.save(entity);
     }
 
-    public void update(Transaction transactionRequest, Long id){
+    public void update(Transaction transactionRequest, Integer id){
         Optional<Transaction> transactionOp = this.transactionRepository.findById(id);
         Transaction transaction = transactionOp.get();
 
@@ -31,11 +31,11 @@ public class TransactionService {
 
     }
 
-    public Optional<Transaction> findById(Long id) {
+    public Optional<Transaction> findById(Integer id) {
         return transactionRepository.findById(id);
     }
 
-    public Boolean deleteById(Long id) {
+    public Boolean deleteById(Integer id) {
         if (transactionRepository.existsById(id)) {
             transactionRepository.deleteById(id);
             return true;

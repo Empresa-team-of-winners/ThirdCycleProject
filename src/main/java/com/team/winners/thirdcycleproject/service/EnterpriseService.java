@@ -22,7 +22,7 @@ public class EnterpriseService {
         return enterpriseRepository.save(entity);
     }
 
-    public void update(Enterprise enterpriseRequest, Long id){
+    public void update(Enterprise enterpriseRequest, Integer id){
             Optional<Enterprise> enterpriseOp = this.enterpriseRepository.findById(id);
             Enterprise enterprise = enterpriseOp.get();
 
@@ -33,11 +33,11 @@ public class EnterpriseService {
 
     }
 
-    public Optional<Enterprise> findById(Long id) {
+    public Optional<Enterprise> findById(Integer id) {
         return enterpriseRepository.findById(id);
     }
 
-    public Boolean deleteById(Long id) {
+    public Boolean deleteById(Integer id) {
         if (enterpriseRepository.existsById(id)) {
             enterpriseRepository.deleteById(id);
             return true;

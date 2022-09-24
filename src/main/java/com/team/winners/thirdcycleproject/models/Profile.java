@@ -6,13 +6,16 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "profile")
+@Table(name = "profiles")
 public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String image;
     private String phone;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
     private String createdAt;
     private String updatedAt;
 

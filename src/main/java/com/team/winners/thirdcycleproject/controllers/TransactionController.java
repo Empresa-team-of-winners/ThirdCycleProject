@@ -30,7 +30,7 @@ public class TransactionController {
     }
 
     @DeleteMapping (value = "delete/{id}")
-    private ResponseEntity<Boolean> deleteTransaction (@PathVariable ("id") Long id){
+    private ResponseEntity<Boolean> deleteTransaction (@PathVariable ("id") Integer id){
         return ResponseEntity.ok(transactionService.deleteById(id));
     }
 }

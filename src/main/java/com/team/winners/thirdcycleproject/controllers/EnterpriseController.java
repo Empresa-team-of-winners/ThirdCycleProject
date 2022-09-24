@@ -30,7 +30,7 @@ public class EnterpriseController {
     }
 
     @DeleteMapping (value = "delete/{id}")
-    private ResponseEntity<Boolean> deleteEnterprise (@PathVariable ("id") Long id){
+    private ResponseEntity<Boolean> deleteEnterprise (@PathVariable ("id") Integer id){
         return ResponseEntity.ok(enterpriseService.deleteById(id));
     }
 }

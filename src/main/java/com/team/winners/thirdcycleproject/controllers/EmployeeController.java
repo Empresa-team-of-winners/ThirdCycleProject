@@ -32,7 +32,7 @@ public class EmployeeController  {
     }
 
     @DeleteMapping (value = "delete/{id}")
-    private ResponseEntity<Boolean> deleteEmployee (@PathVariable ("id") Long id){
+    private ResponseEntity<Boolean> deleteEmployee (@PathVariable ("id") Integer id){
         return ResponseEntity.ok(employeeService.deleteById(id));
     }
 }

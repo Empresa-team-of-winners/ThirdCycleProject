@@ -15,7 +15,7 @@ public class ProfileService {
     public <S extends Profile> S save(S entity) {
         return profileRepository.save(entity);
     }
-    public void update(Profile enterpriseRequest, Long id){
+    public void update(Profile enterpriseRequest, Integer id){
         Optional<Profile> profileOptional = this.profileRepository.findById(id);
         Profile profile = profileOptional.get();
 
@@ -23,10 +23,10 @@ public class ProfileService {
         profile.setPhone(enterpriseRequest.getPhone());
     }
 
-    public Optional<Profile> findById(Long id) {
+    public Optional<Profile> findById(Integer id) {
         return profileRepository.findById(id);
     }
-    public Boolean deleteById(Long id) {
+    public Boolean deleteById(Integer id) {
         if (profileRepository.existsById(id)) {
             profileRepository.deleteById(id);
             return true;

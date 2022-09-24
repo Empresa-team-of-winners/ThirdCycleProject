@@ -21,7 +21,7 @@ public class EmployeeService {
         return employeeRepository.save(entity);
     }
 
-    public void update(Employee enterpriseRequest, Long id){
+    public void update(Employee enterpriseRequest, Integer id){
         Optional<Employee> employeeOp = this.employeeRepository.findById(id);
         Employee employee = employeeOp.get();
 
@@ -32,11 +32,11 @@ public class EmployeeService {
 
     }
 
-    public Optional<Employee> findById(Long id) {
+    public Optional<Employee> findById(Integer id) {
         return employeeRepository.findById(id);
     }
 
-    public Boolean deleteById(Long id) {
+    public Boolean deleteById(Integer id) {
         if (employeeRepository.existsById(id)) {
             employeeRepository.deleteById(id);
             return true;
