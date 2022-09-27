@@ -6,14 +6,16 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "transactions")
+@Table(name = "transaction")
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String concept;
-    private Float amount;
-    private String user;
+    private float amount;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
     @ManyToOne
     @JoinColumn(name = "enterprise_id")
     private Enterprise enterprise;
@@ -23,7 +25,7 @@ public class Transaction {
     public Transaction() {
     }
 
-    public Transaction(int id, String concept, Float amount, String user, Enterprise enterprise, String createdAt, String updatedAt) {
+    public Transaction(int id, String concept, float amount, User user, Enterprise enterprise, String createdAt, String updatedAt) {
         this.id = id;
         this.concept = concept;
         this.amount = amount;
@@ -32,6 +34,7 @@ public class Transaction {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
+
 
     public int getId() {
         return id;
@@ -49,19 +52,19 @@ public class Transaction {
         this.concept = concept;
     }
 
-    public Float getAmount() {
+    public float getAmount() {
         return amount;
     }
 
-    public void setAmount(Float amount) {
+    public void setAmount(float amount) {
         this.amount = amount;
     }
 
-    public String getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(User user) {
         this.user = user;
     }
 

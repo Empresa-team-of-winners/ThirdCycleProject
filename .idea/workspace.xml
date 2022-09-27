@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="feat: metodos http transaction y enterprise">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/UserService.java" afterDir="false" />
+    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="fix: int en jpa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/EnterpriseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/EnterpriseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/EnterpriseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/EnterpriseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/ProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/ProfileRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/repository/TransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/EnterpriseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/EnterpriseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/ProfileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/TransactionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662923743652</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: int en jpa">
+      <created>1663985920320</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663985920320</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +159,7 @@
     <MESSAGE value="feat: services de cada modelo" />
     <MESSAGE value="fix: controllers location in the package" />
     <MESSAGE value="feat: metodos http transaction y enterprise" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: metodos http transaction y enterprise" />
+    <MESSAGE value="fix: int en jpa" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: int en jpa" />
   </component>
 </project>
