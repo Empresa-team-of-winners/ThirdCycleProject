@@ -4,30 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="fix: runtime">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index_employee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index_enterprise.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index_transaction.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/new_employee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/update_employee.html" afterDir="false" />
+    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="feat: views | fix: controllers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/ThirdcycleprojectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/ThirdcycleprojectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/EnterpriseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/EnterpriseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Enterprise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Enterprise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/EnterpriseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/EnterpriseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664418443986</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: views | fix: controllers">
+      <created>1664466163181</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664466163181</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +196,7 @@
     <MESSAGE value="fix: transaction table created" />
     <MESSAGE value="fix: maven" />
     <MESSAGE value="fix: runtime" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: runtime" />
+    <MESSAGE value="feat: views | fix: controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: views | fix: controllers" />
   </component>
 </project>

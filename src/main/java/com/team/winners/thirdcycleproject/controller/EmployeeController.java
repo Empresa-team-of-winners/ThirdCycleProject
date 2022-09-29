@@ -1,16 +1,13 @@
-package com.team.winners.thirdcycleproject.controllers;
+package com.team.winners.thirdcycleproject.controller;
 
 import com.team.winners.thirdcycleproject.models.Employee;
 import com.team.winners.thirdcycleproject.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
