@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Admin</title>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>Empresa</h1>
+  <hr>
+  <h2>Guardar empresa nueva</h2>
+
+  <form action="#" th:action="@{/saveEnterprise}" th:object="${enterprise}"
+        method="POST">
+    <input type="text" th:field="*{name}"
+           placeholder="Nombre" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{document}"
+           placeholder="Documento" class="form-control mb-4 col-4">
+
+    <input type="number" th:field="*{phone}"
+           placeholder="Telefono" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{address}"
+           placeholder="Direccion" class="form-control mb-4 col-4">
+
+    <select id="districtlist" name="districtlist" required>
+      <option disabled selected>Lider</option>
+    </select>
+
+    <button type="submit" class="btn btn-info col-2"> Guardar</button>
+  </form>
+
+  <hr>
+
+  <a th:href = "@{/indexEnterprise}"> Volver</a>
+</div>
+</body>
+</html>
+
+<script>
+var dis;
+$(document).ready(function () {
+   $.ajax({
+      type: "GET",
+      url: "http://localhost:8080/allUsers",
+      data: "json",
+      contentType: "application/json",
+      success: function (data) {
+         $.each(data, function (key, value) {
+            $('#districtlist').append('<option value="' + value.id + '">' + value.email + '</option>');
+         });
+      },
+
+      error: function (data) {
+         $('#districtlist').append('<option>Usuarios no disponibles</option>');
+      },
+   });
+
+   /*$('#districtlist').trigger("change");*/
+
+   $('#districtlist').change(function () {
+
+      var distid1 = $('#districtlist').val();
+      var inputValObj = {};
+      inputValObj.Discode = distid1;
+      var inputVal = JSON.stringify(inputValObj);
+      var data = inputVal.toString();
+   });
+});
+</script>

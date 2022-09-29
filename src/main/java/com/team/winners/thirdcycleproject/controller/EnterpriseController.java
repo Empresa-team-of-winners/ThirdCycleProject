@@ -34,7 +34,7 @@ public class EnterpriseController {
     public String saveEnterprise(@ModelAttribute("enterprise") Enterprise enterprise) {
         // save employee to database
         enterpriseService.save(enterprise);
-        return "redirect:/";
+        return "redirect:/indexEnterprise";
     }
 
     @GetMapping("/showFormForUpdateEnterprise/{id}")
@@ -49,11 +49,11 @@ public class EnterpriseController {
     }
 
     @GetMapping("/deleteEnterprise/{id}")
-    public String deleteEmployee(@PathVariable (value = "id") Integer id) {
+    public String deleteEnterprise(@PathVariable (value = "id") Integer id) {
 
         // call delete employee method
         this.enterpriseService.deleteById(id);
-        return "redirect:/";
+        return "redirect:/indexEnterprise";
     }
 
 
