@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="dev: total">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/service/TransactionService.java" afterDir="false" />
+    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="feat: total transactions">
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_transaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_transaction.html" afterDir="false" />
     </list>
@@ -232,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664477075589</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: total transactions">
+      <created>1664477754347</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664477754347</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +268,7 @@
     <MESSAGE value="fix: create db" />
     <MESSAGE value="fix: transactions crud" />
     <MESSAGE value="dev: total" />
-    <option name="LAST_COMMIT_MESSAGE" value="dev: total" />
+    <MESSAGE value="feat: total transactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: total transactions" />
   </component>
 </project>
