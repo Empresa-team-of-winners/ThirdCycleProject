@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Admin</title>
+
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>Transaccion</h1>
+  <hr>
+  <h2>Actualizar Transaccion</h2>
+
+  <form action="#" th:action="@{/saveTransaction}" th:object="${transaction}"
+        method="POST">
+
+    <!-- Add hidden form field to handle update -->
+    <input type="hidden" th:field="*{id}" />
+
+    <input type="text" th:field="*{concept}"
+           placeholder="Concepto" class="form-control mb-4 col-4">
+
+    <input type="number" th:field="*{amount}"
+           placeholder="Monto" class="form-control mb-4 col-4">
+
+    <select class="form-control mb-4 col-4" id="enterprise" name="enterprise" required>
+      <option disabled selected>Empresa</option>
+    </select>
+
+    <button type="submit" class="btn btn-info col-2"> Actualizar</button>
+  </form>
+
+  <hr>
+
+  <a th:href = "@{/indexTransaction}"> Volver</a>
+</div>
+</body>
+</html>
+
+<script>
+var dis;
+$(document).ready(function () {
+   $.ajax({
+      type: "GET",
+      url: "/allEnterprises",
+      data: "json",
+      contentType: "application/json",
+      success: function (data) {
+         $.each(data, function (key, value) {
+            $('#enterprise').append('<option value="' + value.id + '">' + value.name + '--' + value.document + '</option>');
+         });
+      },
+
+      error: function (data) {
+         $('#enterprise').append('<option>Usuarios no disponibles</option>');
+      },
+   });
+
+   /*$('#enterprise').trigger("change");*/
+
+   $('#enterprise').change(function () {
+
+      var distid1 = $('#enterprise').val();
+      var inputValObj = {};
+      inputValObj.Discode = distid1;
+      var inputVal = JSON.stringify(inputValObj);
+      var data = inputVal.toString();
+   });
+});
+</script>

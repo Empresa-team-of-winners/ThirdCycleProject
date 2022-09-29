@@ -28,9 +28,8 @@
 
     <input type="text" th:field="*{address}" class="form-control mb-4 col-4">
 
-    <input type="text" th:field="*{phone}" class="form-control mb-4 col-4">
 
-    <select id="districtlist" name="districtlist" required>
+    <select class="form-control mb-4 col-4" id="users" name="users" required >
       <option disabled selected>Lider</option>
     </select>
 
@@ -49,29 +48,25 @@ var dis;
 $(document).ready(function () {
    $.ajax({
       type: "GET",
-      url: "http://localhost:8080/allUsers",
+      url: "/allUsers",
       data: "json",
       contentType: "application/json",
       success: function (data) {
          $.each(data, function (key, value) {
-            $('#districtlist').append('<option value="' + value.id + '">' + value.email + '</option>');
+            $('#users').append('<option value="' + value.id + '">' + value.email + '</option>');
          });
       },
 
       error: function (data) {
-         $('#districtlist').append('<option>Usuarios no disponibles</option>');
+         $('#users').append('<option>Usuarios no disponibles</option>');
       },
    });
 
-   /*$('#districtlist').trigger("change");*/
+   /*$('#users').trigger("change");*/
 
-   $('#districtlist').change(function () {
+   $('#users').change(function () {
 
-      var distid1 = $('#districtlist').val();
-      var inputValObj = {};
-      inputValObj.Discode = distid1;
-      var inputVal = JSON.stringify(inputValObj);
-      var data = inputVal.toString();
+      var distid1 = $('#users').val();
    });
 });
 </script>

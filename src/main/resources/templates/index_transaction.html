@@ -65,7 +65,7 @@ body {
         <tr th:each="transaction : ${listTransactions}">
             <td th:text="${transaction.concept}"></td>
             <td th:text="${transaction.amount}"></td>
-            <td th:text="${transaction.enterprise}"></td>
+            <td th:object ="${transaction.enterprise}"><span th:utext="*{name}"></span></td>
             <td> <a th:href="@{/showFormForUpdateTransaction/{id}(id=${transaction.id})}" class="btn btn-primary">Actualizar</a>
                 <a th:href="@{/deleteTransaction/{id}(id=${transaction.id})}" class="btn btn-danger">Eliminar</a>
             </td>

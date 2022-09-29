@@ -11,26 +11,20 @@
 </head>
 <body>
 <div class="container">
-  <h1>Empresa</h1>
+  <h1>Transaccion</h1>
   <hr>
-  <h2>Guardar empresa nueva</h2>
+  <h2>Guardar transaccion nuevo</h2>
 
-  <form action="#" th:action="@{/saveEnterprise}" th:object="${enterprise}"
+  <form action="#" th:action="@{/saveTransaction}" th:object="${transaction}"
         method="POST">
-    <input type="text" th:field="*{name}"
-           placeholder="Nombre" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{concept}"
+           placeholder="Concepto" class="form-control mb-4 col-4">
 
-    <input type="text" th:field="*{document}"
-           placeholder="Documento" class="form-control mb-4 col-4">
+    <input type="number" th:field="*{amount}"
+           placeholder="Monto" class="form-control mb-4 col-4">
 
-    <input type="number" th:field="*{phone}"
-           placeholder="Telefono" class="form-control mb-4 col-4">
-
-    <input type="text" th:field="*{address}"
-           placeholder="Direccion" class="form-control mb-4 col-4">
-
-    <select class="form-control mb-4 col-4" id="users" name="users" required>
-      <option disabled selected>Lider</option>
+    <select class="form-control mb-4 col-4" id="enterprise" name="enterprise" required>
+      <option disabled selected>Empresa</option>
     </select>
 
     <button type="submit" class="btn btn-info col-2"> Guardar</button>
@@ -38,7 +32,7 @@
 
   <hr>
 
-  <a th:href = "@{/indexEnterprise}"> Volver</a>
+  <a th:href = "@{/indexTransaction}"> Volver</a>
 </div>
 </body>
 </html>
@@ -48,25 +42,25 @@ var dis;
 $(document).ready(function () {
    $.ajax({
       type: "GET",
-      url: "/allUsers",
+      url: "/allEnterprises",
       data: "json",
       contentType: "application/json",
       success: function (data) {
          $.each(data, function (key, value) {
-            $('#users').append('<option value="' + value.id + '">' + value.email + '</option>');
+            $('#enterprise').append('<option value="' + value.id + '">' + value.name + '--' + value.document + '</option>');
          });
       },
 
       error: function (data) {
-         $('#users').append('<option>Usuarios no disponibles</option>');
+         $('#enterprise').append('<option>Empresas no disponibles</option>');
       },
    });
 
-   /*$('#users').trigger("change");*/
+   /*$('#enterprise').trigger("change");*/
 
-   $('#users').change(function () {
+   $('#enterprise').change(function () {
 
-      var distid1 = $('#users').val();
+      var distid1 = $('#enterprise').val();
       var inputValObj = {};
       inputValObj.Discode = distid1;
       var inputVal = JSON.stringify(inputValObj);

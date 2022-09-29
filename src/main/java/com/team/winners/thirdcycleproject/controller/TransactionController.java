@@ -34,7 +34,7 @@ public class TransactionController {
     public String saveTransaction(@ModelAttribute("transaction") Transaction transaction) {
         // save employee to database
         transactionService.save(transaction);
-        return "redirect:/";
+        return "redirect:/indexTransaction";
     }
 
     @GetMapping("/showFormForUpdateTransaction/{id}")
@@ -53,7 +53,7 @@ public class TransactionController {
 
         // call delete employee method
         this.transactionService.deleteById(id);
-        return "redirect:/";
+        return "redirect:/indexTransaction";
     }
 
 

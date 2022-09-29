@@ -1,9 +1,11 @@
 package com.team.winners.thirdcycleproject.controller;
 
 import com.team.winners.thirdcycleproject.models.Enterprise;
+import com.team.winners.thirdcycleproject.models.User;
 import com.team.winners.thirdcycleproject.service.EnterpriseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -77,5 +79,10 @@ public class EnterpriseController {
 
         model.addAttribute("listEnterprises", listEnterprises);
         return "index_enterprise.html";
+    }
+
+    @GetMapping("/allEnterprises")
+    private ResponseEntity<List<Enterprise>> getAllEnterprise (){
+        return ResponseEntity.ok(enterpriseService.findAll());
     }
 }
