@@ -22,6 +22,14 @@ public class TransactionService {
     public List<Transaction> findAll() {
         return transactionRepository.findAll();
     }
+    public Float getAllAmount() {
+        List<Transaction> transactionList = this.transactionRepository.findAll();
+        Float value = (float) 0;
+        for(Transaction item : transactionList){
+            value  += item.getAmount();
+        }
+        return value;
+    }
 
     public <S extends Transaction> S save(S entity) {
         return transactionRepository.save(entity);

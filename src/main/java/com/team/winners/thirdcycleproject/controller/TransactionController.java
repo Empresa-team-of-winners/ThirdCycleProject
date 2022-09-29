@@ -66,6 +66,7 @@ public class TransactionController {
 
         Page<Transaction> page = transactionService.findPaginated(pageNo, pageSize, sortField, sortDir);
         List<Transaction> listTransactions = page.getContent();
+        Float total = transactionService.getAllAmount();
 
         model.addAttribute("currentPage", pageNo);
         model.addAttribute("totalPages", page.getTotalPages());
@@ -76,6 +77,7 @@ public class TransactionController {
         model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
 
         model.addAttribute("listTransactions", listTransactions);
+        model.addAttribute("total", total);
         return "index_transaction.html";
     }
 }
