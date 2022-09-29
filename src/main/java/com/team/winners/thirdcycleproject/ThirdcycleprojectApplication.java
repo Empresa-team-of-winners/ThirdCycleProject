@@ -24,7 +24,7 @@ public class ThirdcycleprojectApplication {
 		SpringApplication.run(ThirdcycleprojectApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
@@ -32,6 +32,6 @@ public class ThirdcycleprojectApplication {
 				registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("*").allowedHeaders("*");
 			}
 		};
-	}
+	}*/
 
 }

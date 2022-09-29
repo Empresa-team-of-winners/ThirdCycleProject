@@ -1,12 +1,9 @@
 package com.team.winners.thirdcycleproject.models;
 
 
-import lombok.Data;
-
 import javax.persistence.*;
 
 @Entity
-@Data
 @Table(name = "enterprise")
 public class Enterprise {
     @Id

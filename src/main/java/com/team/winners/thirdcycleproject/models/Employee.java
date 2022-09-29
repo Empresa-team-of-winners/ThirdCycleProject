@@ -1,11 +1,9 @@
 package com.team.winners.thirdcycleproject.models;
 
-import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
-@Data
 @Table(name = "employee")
 public class Employee {
     @Id
@@ -37,7 +35,6 @@ public class Employee {
         this.createdAt = createdAt;
     }
 
-
     public int getId() {
         return id;
     }
@@ -54,11 +51,11 @@ public class Employee {
         this.email = email;
     }
 
-    public Profile getPerfil() {
+    public Profile getProfile() {
         return profile;
     }
 
-    public void setPerfil(Profile profile) {
+    public void setProfile(Profile profile) {
         this.profile = profile;
     }
 

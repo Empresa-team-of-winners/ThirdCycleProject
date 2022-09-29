@@ -4,61 +4,85 @@ import com.team.winners.thirdcycleproject.models.Employee;
 import com.team.winners.thirdcycleproject.models.User;
 import com.team.winners.thirdcycleproject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/user/")
+@Controller
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @GetMapping
-    private ResponseEntity<List<User>> getAllUser (){
-        return ResponseEntity.ok(userService.findAll());
+
+    @GetMapping("/")
+    public String viewHomePage(Model model) {
+        return findPaginated(1, "email", "asc", model);
     }
 
-    @PostMapping
-    private ResponseEntity<User> saveUser (@RequestBody User user){
-        try {
-            User userSaved = userService.save(user);
-            return ResponseEntity.created(new URI("/user/"+userSaved.getId())).body(userSaved);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
+
+    @GetMapping("/showNewUserForm")
+    public String showNewUserForm(Model model) {
+        // create model attribute to bind form data
+        User user = new User();
+        model.addAttribute("user", user);
+        return "new_user";
     }
 
-    @PutMapping("updateUser/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable("id") Integer id, @RequestBody User user) {
-        Optional<User> userData = userService.findById(id);
-        if (userData.isPresent()) {
-            User _user = userData.get();
-            _user.setEmail(user.getEmail());
-            return new ResponseEntity<>(userService.save(_user), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+    @PostMapping("/saveUser")
+    public String saveEmployee(@ModelAttribute("user") User user) {
+        // save employee to database
+        userService.save(user);
+        return "redirect:/";
     }
 
-    @GetMapping(value = "get/{id}")
-    public ResponseEntity<User> getUserlById(@PathVariable("id") Integer id) {
-        Optional<User> userData = userService.findById(id);
+    @GetMapping("/showFormForUpdateUser/{id}")
+    public String showFormForUpdateUser(@PathVariable ( value = "id") Integer id, Model model) {
 
-        if (userData.isPresent()) {
-            return new ResponseEntity<>(userData.get(), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        // get employee from the service
+        Optional<User> user = userService.findById(id);
+
+        // set employee as a model attribute to pre-populate the form
+        model.addAttribute("user", user);
+        return "update_user";
     }
 
-    @DeleteMapping (value = "delete/{id}")
-    private ResponseEntity<Boolean> deleteUser (@PathVariable ("id") Integer id){
-        return ResponseEntity.ok(userService.deleteById(id));
+    @GetMapping("/deleteUser/{id}")
+    public String deleteUser(@PathVariable (value = "id") Integer id) {
+
+        // call delete employee method
+        this.userService.deleteById(id);
+        return "redirect:/";
     }
+
+
+    @GetMapping("/page/{pageNo}")
+    public String findPaginated(@PathVariable (value = "pageNo") int pageNo,
+                                @RequestParam("sortField") String sortField,
+                                @RequestParam("sortDir") String sortDir,
+                                Model model) {
+        int pageSize = 5;
+
+        Page<User> page = userService.findPaginated(pageNo, pageSize, sortField, sortDir);
+        List<User> listUsers = page.getContent();
+
+        model.addAttribute("currentPage", pageNo);
+        model.addAttribute("totalPages", page.getTotalPages());
+        model.addAttribute("totalItems", page.getTotalElements());
+
+        model.addAttribute("sortField", sortField);
+        model.addAttribute("sortDir", sortDir);
+        model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
+
+        model.addAttribute("listUsers", listUsers);
+        return "index";
+    }
+
 }

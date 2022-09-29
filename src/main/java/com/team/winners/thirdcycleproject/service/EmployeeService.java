@@ -3,6 +3,10 @@ package com.team.winners.thirdcycleproject.service;
 import com.team.winners.thirdcycleproject.models.Employee;
 import com.team.winners.thirdcycleproject.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -44,4 +48,12 @@ public class EmployeeService {
         return false;
     }
 
+
+    public Page<Employee> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection) {
+        Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending() :
+                Sort.by(sortField).descending();
+
+        Pageable pageable = PageRequest.of(pageNo - 1, pageSize, sort);
+        return this.employeeRepository.findAll(pageable);
+    }
 }
