@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="feat: views | fix: controllers">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/ThirdcycleprojectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/ThirdcycleprojectApplication.java" afterDir="false" />
+    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="fix: routing for heroku">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/ThirdcycleprojectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/ApplicationThirdcycleproject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/team/winners/thirdcycleproject/ThirdcycleprojectApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/team/winners/thirdcycleproject/ApplicationThirdcycleprojectTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +82,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="ThirdcycleprojectApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.team.winners.thirdcycleproject.ThirdcycleprojectApplication" />
+    <configuration name="ApplicationThirdcycleproject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.team.winners.thirdcycleproject.ApplicationThirdcycleproject" />
       <module name="thirdcycleproject" />
       <extension name="coverage">
         <pattern>
@@ -97,7 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ThirdcycleprojectApplication" />
+        <item itemvalue="Application.ApplicationThirdcycleproject" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664466163181</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix: routing for heroku">
+      <created>1664467131920</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664467131920</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +204,7 @@
     <MESSAGE value="fix: maven" />
     <MESSAGE value="fix: runtime" />
     <MESSAGE value="feat: views | fix: controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: views | fix: controllers" />
+    <MESSAGE value="fix: routing for heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: routing for heroku" />
   </component>
 </project>
