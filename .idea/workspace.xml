@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="fix: routing for heroku">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/ThirdcycleprojectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/ApplicationThirdcycleproject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/team/winners/thirdcycleproject/ThirdcycleprojectApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/team/winners/thirdcycleproject/ApplicationThirdcycleprojectTests.java" afterDir="false" />
+    <list default="true" id="d05ba173-2f0d-4337-83b9-0b5ee1dfdd28" name="Changes" comment="fix: comment create to dont do again">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/new_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/update_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team/winners/thirdcycleproject/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_transaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_transaction.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664467131920</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix: create db in heroku">
+      <created>1664468546191</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664468546191</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: comment create to dont do again">
+      <created>1664468642345</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664468642345</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +222,8 @@
     <MESSAGE value="fix: runtime" />
     <MESSAGE value="feat: views | fix: controllers" />
     <MESSAGE value="fix: routing for heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: routing for heroku" />
+    <MESSAGE value="fix: create db in heroku" />
+    <MESSAGE value="fix: comment create to dont do again" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: comment create to dont do again" />
   </component>
 </project>
